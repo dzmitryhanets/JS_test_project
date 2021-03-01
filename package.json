@@ -4,8 +4,10 @@
   "description": "cypress test",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress": "cypress open"
+    "cypress": "cypress open --env allure=true",
+    "debug_test": "npx cypress open",
+    "test": "npx cypress run --config video=true --env allure=true,allureResultsPath=allure-results --browser electron",
+    "test_notification": "npx cypress-tags run -e TAGS='@newLinkClose' --config video=true --browser electron"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
@@ -17,6 +19,11 @@
   "author": "Dzmitry",
   "license": "ISC",
   "dependencies": {
+    "cucumber": "^7.0.0-rc.0",
     "cypress": "^6.5.0"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.3.6",
+    "cypress-cucumber-preprocessor": "^4.0.1"
   }
 }

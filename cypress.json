@@ -9,5 +9,12 @@
   "responseTimeout": 20000,
   "videoCompression": 20,
   "viewportWidth": 1920,
-  "viewportHeight": 1080
+  "viewportHeight": 1080,
+    "retries": {
+      "runMode": 0,
+      "openMode": 0
+    },
+      "env": {
+          "allure": true
+      }
 }
