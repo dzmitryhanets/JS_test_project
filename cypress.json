@@ -1,6 +1,13 @@
 {
   "testFiles": "**/*.feature",
   "ignoreTestFiles": ["*.js", "*.ts", "*.md"],
+  "defaultCommandTimeout": 20000,
+  "execTimeout": 20000,
+  "taskTimeou": 20000,
+  "pageLoadTimeout": 30000,
+  "requestTimeout": 20000,
+  "responseTimeout": 20000,
+  "videoCompression": 20,
   "viewportWidth": 1920,
   "viewportHeight": 1080
 }
