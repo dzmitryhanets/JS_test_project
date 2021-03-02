@@ -7,7 +7,8 @@
     "cypress": "cypress open --env allure=true",
     "debug_test": "npx cypress open",
     "test": "npx cypress run --config video=true --env allure=true,allureResultsPath=allure-results --browser electron",
-    "test_notification": "npx cypress-tags run -e TAGS='@newLinkClose' --config video=true --browser electron"
+    "test_notification": "npx cypress-tags run -e TAGS='@newLinkClose' --config video=true --browser electron",
+    "generate_report": "allure generate allure-results --clean -o allure-results --clean -o allure-report && allure open allure-report"
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
