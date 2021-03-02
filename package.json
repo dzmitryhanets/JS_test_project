@@ -4,7 +4,7 @@
   "description": "cypress test",
   "main": "index.js",
   "scripts": {
-    "cypress": "cypress open --env allure=true",
+    "cypress": "cypress run --config video=true --env allure=true --browser electron",
     "debug_test": "npx cypress open",
     "test": "npx cypress run --config video=true --env allure=true,allureResultsPath=allure-results --browser electron",
     "test_notification": "npx cypress-tags run -e TAGS='@newLinkClose' --config video=true --browser electron",
