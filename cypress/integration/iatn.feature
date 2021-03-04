@@ -4,6 +4,6 @@ Feature: iATN
   
   @focus
   Scenario: Login into iATN
-    Given I open iATN page
-    When I login as "dmitry.ganets@identifix.com" with "12345678" password
-    Then I see "IATN" in the title
+    Given user open iATN page
+    When user login as "dmitry.ganets@identifix.com" with "12345678" password
+    Then user see "IATN" in the title

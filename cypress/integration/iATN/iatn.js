@@ -1,16 +1,23 @@
-import { Given, When, Then } from "cypress-cucumber-preprocessor/steps";
+import {
+  Given,
+  When,
+  Then,
+} from 'cypress-cucumber-preprocessor/steps'
 
 const url = 'https://app.iatn.community'
-Given('I open iATN page', () => {
+Given('user open iATN page', () => {
   cy.visit(url)
 })
 
-When("I login as {string} with {string} password", (username, password) => {
-  cy.get('#Username').type(username);
-  cy.get('#Password').type(password);
-  cy.get('button:contains(Login)').click();
-});
+When(
+  'user login as {string} with {string} password',
+  (username, password) => {
+    cy.get('#Username').type(username)
+    cy.get('#Password').type(password)
+    cy.get('button:contains(Login)').click()
+  },
+)
 
-Then(`I see {string} in the title`, (title) => {
+Then(`user see {string} in the title`, (title) => {
   cy.title().should('include', title)
 })

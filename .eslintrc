@@ -1,0 +1,13 @@
+{
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "globals": {
+    "browser": true,
+    "$": true
+  },
+    "rules": {
+      "no-console": "off"
+    },
+    "plugins": [
+      "prettier"
+    ]
+  }
