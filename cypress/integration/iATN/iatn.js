@@ -17,3 +17,22 @@ When('user login as {string}', (user) => {
 Then(`user see {string} in the title`, (title) => {
   cy.title().should('include', title)
 })
+
+Then(`user's name and role are`, (datatable) => {
+  var value
+  datatable.hashes().forEach((elem) => {
+    for (var name in elem) {
+      value = elem[name]
+    }
+  })
+  datatable.hashes().forEach((elem) => {
+    cy.get('span[class^="profile-menu__name"]').should(
+      'have.text',
+      elem.Name,
+    )
+    cy.get('span[class^="profile-menu__role"]').should(
+      'have.text',
+      elem.Role,
+    )
+  })
+})
