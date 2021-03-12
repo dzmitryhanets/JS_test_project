@@ -24,8 +24,6 @@ Then(`user's name and role are`, (datatable) => {
     for (var name in elem) {
       value = elem[name]
     }
-  })
-  datatable.hashes().forEach((elem) => {
     cy.get('span[class^="profile-menu__name"]').should(
       'have.text',
       elem.Name,
