@@ -28,8 +28,7 @@ jobs:
       # we need to install CircleCI CLI tool
       # to run the "manual" tests
       - circleci-cli/install
-      - unset NODE_OPTIONS
-      - run: npm test
+      - run: npm cypress
       - run: npm run manual:tests
       - run: npm run docs
 
